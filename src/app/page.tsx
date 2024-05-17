@@ -7,7 +7,7 @@ export default function Home() {
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center from-zinc-200 pb-6 pt-8 backdrop-blur-2xl ">
           <Image
-            className="dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+            className="dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
             src="/torro_clear.png"
             alt="Next.js Logo"
             width={180}
