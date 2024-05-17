@@ -18,7 +18,7 @@ export default function Home() {
         
       </div>
       <div className="fixed -z-10 w-full ">
-        <video autoPlay muted className="bg-cover bg-center w-full">
+        <video autoPlay muted loop className="bg-cover bg-center w-full">
           <source src="/city.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
