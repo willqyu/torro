@@ -9,7 +9,7 @@ export default function Home() {
           <Image
             className="dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
             src="/torro_clear.png"
-            alt="Next.js Logo"
+            alt="Torro Logo"
             width={180}
             height={40}
             priority

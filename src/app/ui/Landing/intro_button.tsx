@@ -11,7 +11,7 @@ export default function Intro_Button({url}:{url: string}) {
         <Link
           href={"/"+ url}
           className="
-          flex items-center rounded-full border border-white-300 h-10 px-7 m-3
+          group flex items-center rounded-full border border-white-300 h-10 px-7 m-3
           hover:border-primary hover:bg-primary transition-colors duration-300 "
           rel="noopener noreferrer"
         >
