@@ -15,7 +15,14 @@ const config: Config = {
       },
       colors: {
         primary: '#159f82',
+        secondary: "#242a76",
+        primary_dark: "#275c35"
       }
+    },
+  },
+  variants: {
+    extend: {
+        display: ["group-hover"],
     },
   },
   plugins: [],

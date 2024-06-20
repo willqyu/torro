@@ -3,5 +3,5 @@ export default function Visitors () {
         <div>
             Visitors
         </div>
-    )
+    );
 }

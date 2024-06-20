@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 
-const serif = DM_Serif_Display({  subsets: ["latin"], weight: "400"});
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({  subsets: ["latin"], weight: "400"});
+
+
 
 export const metadata: Metadata = {
   title: "Torro",
@@ -15,8 +18,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={serif.className}>{children}</body>
+    <html lang="en" className="[&::-webkit-scrollbar]:hidden">
+      <body 
+        className={playfair.className}
+      >
+          {children}
+      </body>
     </html>
   );
 }
