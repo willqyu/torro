@@ -94,7 +94,10 @@ export default function Navbar({delay} : {delay : number}) {
     return (
         <motion.div 
             className={`
-                fixed min-w-full flex justify-center transition-colors duration-500 ${isGreen ? "bg-primary" : ""}
+                fixed min-w-full 
+                flex justify-center 
+                z-[100]
+                transition-colors duration-500 ${isGreen ? "bg-primary" : ""}
             `}
             ref={scope}
         >

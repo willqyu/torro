@@ -4,11 +4,10 @@ import { motion } from "framer-motion";
 
 
 
-export function InfoTag({id, tag} : {id: number, tag: string}) {
+export function InfoTag({id, tag, className=""} : {id: number, tag: string, className?: string}) {
     return (
-        <motion.div className="
-            flex items-center
-        "
+        <motion.div className={`
+            flex items-center ` + className}
         >
             <div className="
                 flex justify-center items-center
@@ -25,15 +24,17 @@ export function InfoTag({id, tag} : {id: number, tag: string}) {
 }
 
 export function SectionHeading({
-    children
+    children,
+    className=""
   }: Readonly<{
     children: React.ReactNode;
+    className?: string
   }>) {
     
 
     return (
         <motion.h1
-            className="text-6xl mt-4 mb-10"
+            className={"text-6xl mt-4 mb-10 "+ className}
         >{children}</motion.h1>
     )
   }
@@ -53,21 +54,24 @@ export function SectionParagraph({
 }
 
 export default function Section({
-    children
+    children,
+    className=""
   }: Readonly<{
     children: React.ReactNode;
+    className?: string
   }>) {
 
     const scope = useRevealOnView();
     return (
         <div
-            className="
-                px-40 min-w-full my-10
+            className={`
+                px-40 min-w-full mt-10 py-20
                 box-border z-10
-                flex flex-col justify-center
-            "
+                flex flex-col justify-center ` + className}
         >
-            <motion.div ref={scope}>
+            <motion.div 
+                className="z-10 relative"
+                ref={scope}>
                 {children}
             </motion.div>
         </div>

@@ -10,14 +10,14 @@ export default function ValueTag({
     const ref = useRevealOnView();
     return (
         <motion.div 
-            className={className + " p-7 rounded-2xl " + serifBody.className}
+            className={className + " p-7 " + serifBody.className}
             ref={ref}
             layout
         >
-            <h1 className="inline text-3xl text-secondary">
-                <span className="font-extrabold text-white">{value.slice(0, 1)}</span>{value.slice(1)}
+            <h1 className={"inline text-3xl text-secondary " + sanSerif.className}>
+                {value}
             </h1>
-            <p className={"text-white mt-10 text-l " + sanSerif.className}>{tagline}</p>
+            <p className={"mt-[8em] text-2xl " + sanSerif.className}>{tagline}</p>
         </motion.div>
     )
 }

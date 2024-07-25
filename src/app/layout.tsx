@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="[&::-webkit-scrollbar]:hidden">
+    <html lang="en" className="scroll-smooth [&::-webkit-scrollbar]:hidden">
       <body 
         className={playfair.className}
       >

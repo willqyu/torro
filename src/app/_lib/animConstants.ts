@@ -25,12 +25,13 @@ export function useCountOnView(target: number) {
     const [isHidden, setHidden] = useState(true);
     const [scope, animate] = useAnimate()
     const isInView = useInView(scope);
+    
     useEffect(() => {
         if (isInView === isHidden) return
         if (isInView) {
             animate(0, target, {
                 onUpdate: latest => {
-                    setValue(Math.round(latest));
+                    setValue(Math.round(latest*100)/100);
                 }, 
                 delay: .2,
                 duration: 1.5,
