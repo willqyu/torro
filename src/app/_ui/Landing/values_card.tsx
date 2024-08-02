@@ -7,17 +7,15 @@ export default function ValueTag({
 } : {
     value: string, tagline: string, className?: string
 }) {
-    const ref = useRevealOnView();
     return (
         <motion.div 
-            className={className + " p-7 " + serifBody.className}
-            ref={ref}
+            className={className + " flex flex-col justify-between p-7 " + serifBody.className}
             layout
         >
-            <h1 className={"inline text-3xl text-secondary " + sanSerif.className}>
+            <h1 className={"inline mt-[8em] mb-[2em] text-4xl text-secondary font-medium " + serifBody.className}>
                 {value}
             </h1>
-            <p className={"mt-[8em] text-2xl " + sanSerif.className}>{tagline}</p>
+            <p className={" text-2xl " + sanSerif.className}>{tagline}</p>
         </motion.div>
     )
 }

@@ -6,7 +6,10 @@ import Intro_Video from "./_ui/Landing/intro_video";
 import { motion } from "framer-motion";
 import Navbar from "./_ui/navbar";
 import Link from "next/link";
+import Image from 'next/image';
+
 import { sanSerif, serifBody, serifLogo } from "./_lib/font";
+
 import { easing1 } from "./_lib/animConstants";
 import TickerTag, {Ticker} from "./_ui/Landing/ticker";
 import ValueTag from "./_ui/Landing/values_card";
@@ -90,9 +93,9 @@ Contact us to find out about our strategies and how you can join the Torro commu
 
         </SectionParagraph>
 
-        <div className="container mt-10">
+        {/* <div className="container mt-10">
           <BitcoinPrice />
-        </div>
+        </div> */}
         
         <div className="divide-y-2 divide-primary">
 
@@ -113,7 +116,7 @@ Contact us to find out about our strategies and how you can join the Torro commu
       <Section className="bg-primary">
         <InfoTag id={2} tag="CORE VALUES" className="text-white"></InfoTag>
         <SectionHeading className="text-white">Our Guiding Principles</SectionHeading>
-        <div className="my-20 grid grid-cols-2 divide-x divide-y divide-gray-200 border">
+        <div className="mb-20 mt-36 grid grid-cols-2 divide-x divide-y divide-gray-200 border">
           <ValueTag
               value="Transformation" 
               tagline="Our belief in cryptocurrency's transformative power"
@@ -140,7 +143,44 @@ Contact us to find out about our strategies and how you can join the Torro commu
           
       </Section>
       
+      <Section>
+        <InfoTag id={3} tag="REPORTING"></InfoTag>
+        <SectionHeading>Market Updates</SectionHeading>
+        <SectionParagraph className="mb-10">
+          Find our latest monthly market report here. Stay tuned for insight into our fund and the crypto landscape at large.
+        </SectionParagraph>
+        <iframe src="https://drive.google.com/embeddedfolderview?id=1_L_r8jgN-hxC_3ekClD1Z-rNp_5J2Cxf#grid" 
+          className="w-full h-[400px]"></iframe>
+      </Section>
       
+      <Section>
+        <InfoTag id={3} tag="JOIN THE MOVEMENT"></InfoTag>
+        <SectionHeading>Contact Us</SectionHeading>
+        <h1 className={"text-2xl " + sanSerif.className}>Investor Relations</h1>
+        <a href="mailto:contact@torroassets.com">contact@torroassets.com</a>
+        
+        <h1 className={"text-2xl mt-8 " + sanSerif.className}>Follow us on</h1>
+        <div className="flex gap-x-4 mt-4">
+          <a href="https://x.com/TorroAssets" target="_blank">
+            <Image
+              priority
+              src="x.svg"
+              alt="Follow us on Twitter"
+              width="30" height="30"
+            /> 
+          </a>
+          <a href="https://www.linkedin.com/company/torro-assets/" target="_blank">
+            <Image
+              priority
+              src="linkedin.svg"
+              alt="Follow us on Linkedin"
+              width="30" height="30"
+            /> 
+          </a>
+        </div>
+        
+      </Section>
+
       <Intro_Anim delay={introDelay1}></Intro_Anim>
       
     </main>
